@@ -7,7 +7,7 @@ let random_numbers = [85,52,59,60,47,64,47,48,96,76,1,75,72,68,36,21,1,12,95,74,
  * VARIABLES
     * key: the variable that tracks the current value being moved down the array
         * to its sorted location
-    * i: the iterator for the number we are comparing the key to, in the primary
+    * i: the iterator for the value we are comparing the key to, in the primary
         * position (lower down the array)
     * j: the iterator that tracks our progress through the array
  * WHAT IT DOES: This function takes in a list, sorts it by numerical value and 
@@ -29,14 +29,14 @@ let i;
         key = list[j];
         // the counter for the while loop starts as a representation of the index previous the key value index
         i = j-1; 
-        // While loop that will bounce the number down the chain until it gets to its sorted position
-            // CONDITION: The iterator must be no smaller than 0 (out of range) AND the number in the primary position must be greater than the key(secondary position)
+        // While loop that will bounce the value down the chain until it gets to its sorted position
+            // CONDITION: The iterator must be no smaller than 0 (out of range) AND the value in the primary position must be greater than the key(secondary position)
         while (i >= 0 && list[i] > key) {
-            // puts primary number in secondary placement
+            // puts primary value in secondary placement
             list[i + 1] = list[i];
-            // set new primary number to one index lower
+            // set new primary value to one index lower
             i = i-1;
-            // set previous secondary number(key) to the previous primary position
+            // set previous secondary value(key) to the previous primary position
             list[i + 1] = key;
         }
     }
